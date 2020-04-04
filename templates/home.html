@@ -1,81 +1,18 @@
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-html {
-  background: white;
-}
-body {
-  background: #864bd4cf;
-height: -webkit-fill-available;
-}
-.carton {
-  text-align: center;
-font-size: xx-large;
-    font-weight: 800;
-    color: white;
-    height: fit-content;
-    padding-top: 5%;
-    vertical-align: middle;
-}
-p {
-padding: 20px 0;
-    font-family: sans-serif;
-    background: white;
-    color: #238cab;
-}
-
-table {
-box-shadow: 0px 10px 20px 0px #4e4e4e;
-  margin: auto;
-  padding: 10px;
-  background: #56acc5;
-  text-align: center;
-  font-weight: 800;
-}
-@media screen and (orientation:landscape) and (max-width:600px) {
-table {
-width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-td {font-size: 10vw; }
-}
-
-td {
-  font-size: 4vw;
-  width: 110px;
-  height: 80px;
-  color: white;
-  background-color: #ffffff3d;
-}
-
-.darker {
-  background-color: #ffffff21;
-}
-
-
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gradient.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
 </head>
 <body>
-<div class="carton">
-<p> {{name}} </p>
-<table>
-{% for i in range(0, 4) %}
-  <tr>
-  {% for j in range(0, 6) %}
-    {% if (i + j) % 2 == 0 %}
-    <td class="darker">
-    {% else %}
-    <td>
-    {% endif %}
-    {{ numbers[6 * i+j] }} </td>
-  {% endfor %}
-  </tr>
-{% endfor %}
-</table>
-<div/>
+<div class="background">
+    <div class="container">
+        <h1>BINGO</h1>
+        <input type="text" placeholder="Username:">
+        <div class="btn-border">
+            <button>Submit</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
