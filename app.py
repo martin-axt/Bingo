@@ -1,8 +1,8 @@
 from flask import Flask, render_template
 import random
+import json
 
 app = Flask(__name__)
-users = {}
 
 @app.route("/")
 def home():
@@ -10,15 +10,17 @@ def home():
 
 @app.route("/<name>")
 def user(name):
+	with open('users.txt') as json_file:
+		users = json.load(json_file)
 	if name not in users:
-		users[name] = sorted(random.sample(range(1, 90), k=27))
+		users[name] = sorted(random.sample(range(1, 75), k=27))
 		for i in range(0, 3):
-			empties = sorted(random.sample(range(0, 9), k=4))
+			empties = sorted(random.sample(range(0, 9), k=3))
 			for empt in empties:
-				try:
-					users[name][3 * empt + i] = 0
-				except:
-					print("STOP")
+				users[name][3 * empt + i] = 0
+		with open('users.txt', 'w') as json_file:
+			json.dump(users, json_file)
+
 	return render_template("card.html", name=name, numbers=users[name])
 
 @app.route("/leaderboard")
