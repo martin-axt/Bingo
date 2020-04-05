@@ -4,12 +4,18 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gradient.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/card.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='js/card.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <div class="background">
     <div class="container">
-        <h2> {{name}} </h2>
+        <div class="header">
+            <h2> {{name}} </h2>
+            <div class="btn-border">
+                <button onclick="goToLeaderboard()"><i class="fa fa-trophy" aria-hidden="true"></i></button>
+            </div>
+        </div>
         <table>
         {% for i in range(0, 3) %}
           <tr>

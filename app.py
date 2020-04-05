@@ -9,7 +9,7 @@ def home():
 	return render_template("home.html")
 
 @app.route("/<name>")
-def  user(name):
+def user(name):
 	if name not in users:
 		users[name] = sorted(random.sample(range(1, 90), k=27))
 		for i in range(0, 3):
@@ -20,6 +20,10 @@ def  user(name):
 				except:
 					print("STOP")
 	return render_template("card.html", name=name, numbers=users[name])
+
+@app.route("/leaderboard")
+def leaderboard():
+	return render_template("leaderboard.html")
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=8080)

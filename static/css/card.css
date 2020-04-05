@@ -1,20 +1,30 @@
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
 }
 
 .background {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     flex-grow: 1;
     margin: 1vh;
     background: linear-gradient(216deg, #ac65d4, #d9a442);
     background-size: 400% 400%;
     animation: BackgroundGradient 5s ease infinite;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+
     flex-direction: column;
     align-items: stretch;
     height: 400px;
@@ -29,11 +39,16 @@ h2 {
     text-align: center;
     font-family: sans-serif;
     color: #c36686;
+    flex-grow: 1;
 }
 
 table {
-    flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+
+    flex-grow: 1;
     background: #56acc5;
     border-radius: 5px;
     margin: 1%;
@@ -42,17 +57,28 @@ table {
 }
 
 tbody {
-    flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+
+    flex-grow: 1;
     flex-direction: column;
 }
 
 tr {
-    flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    flex-grow: 1;
 }
 
 td {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     cursor: pointer;
     font-family: sans-serif;
     font-weight: 800;
@@ -60,7 +86,6 @@ td {
     margin: 1px;
     flex-grow: 1;
     border-radius: 10px;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-basis: 10%;
@@ -87,3 +112,42 @@ td:hover:not(.invalid) {
     background: #8fbf50;
 }
 
+.header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.btn-border {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    border-radius: 11px;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    background: linear-gradient(216deg, #ffd14b, #a56caf);
+    background-size: 400% 400%;
+    animation: BackgroundGradient 2s ease infinite;
+}
+
+button {
+    cursor: pointer;
+    height: 90%;
+    width: 100%;
+    color: #ffa600;
+    background: #c36686;
+    border-radius: 11px;
+    border: none;
+    font-size: 24px;
+    outline:none;
+}
+
+button:active {
+    height: 100%;
+}

@@ -1,20 +1,31 @@
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
 }
 
 .background {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
     flex-grow: 1;
     margin: 1vh;
     background: linear-gradient(216deg, #ac65d4, #42d1d9);
     background-size: 400% 400%;
     animation: BackgroundGradient 5s ease infinite;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+
     flex-direction: column;
     align-items: center;
     height: 300px;
@@ -31,7 +42,7 @@ h1 {
 
 .btn-border {
     border-radius: 11px;
-    padding: 0 0 2% 0;
+    /*padding: 0 0 2% 0;*/
     width: 90%;
     height: 20%;
     margin: 1vh;
@@ -56,13 +67,16 @@ input {
 
 button {
     cursor: pointer;
-    height: 100%;
+    height: 90%;
     width: 100%;
     color: white;
     font-size: 25px;
     background: #c36686;
     border-radius: 11px;
     border: none;
+    outline:none;
 }
 
+button:active {
+    height: 100%;
 }
