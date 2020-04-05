@@ -11,7 +11,10 @@ def home():
 @app.route("/<name>")
 def  user(name):
 	if name not in users:
-		users[name] = random.sample(range(1, 76), k=24)
+		users[name] = sorted(random.sample(range(1, 90), k=27))
+		empties = random.sample(range(0, 27), k=12)
+		for empt in empties:
+			users[name][empt] = 0
 	return render_template("card.html", name=name, numbers=users[name])
 
 if __name__ == '__main__':
