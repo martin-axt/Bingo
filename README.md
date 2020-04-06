@@ -15,4 +15,4 @@ Bingo game to play online while the quarantine of 2020. This project consist in 
 5. Install Flask with pip `pip install Flask`
 6. Run the server `gunicorn -b 0.0.0.0:8080 -w 4 app:app`
 
-<img src="example.png" width="600" height="450" />
+<img src="example.png" width="800" height="450" />
